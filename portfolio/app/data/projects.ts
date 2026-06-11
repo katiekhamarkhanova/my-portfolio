@@ -1,6 +1,7 @@
 export interface Project {
   slug: string
   title: string
+  image: string
   problem: string
   audience: string
   techStack: string[]
@@ -14,6 +15,7 @@ export const projects: Project[] = [
   {
     slug: 'band-inventory',
     title: 'Band Inventory',
+    image: '/images/band inventory.png',
     problem:
       'Our school\'s band teacher needed a reliable way to track instruments and sheet music — who had what, what needed repair, and what was available. Commercial tools like Cut Time exist, but they cost money the program didn\'t have. He was stuck juggling spreadsheets that were hard to update and easy to mess up.',
     audience:
@@ -29,6 +31,7 @@ export const projects: Project[] = [
   {
     slug: 'pta-website-v2',
     title: 'PTA Website v2',
+    image: '/images/pta.png',
     problem:
       'The existing PTA website felt dated — cluttered layouts, inconsistent styling, and content that was hard for parents to find quickly. The PTA needed something that looked current and was easier to maintain.',
     audience:
@@ -43,6 +46,7 @@ export const projects: Project[] = [
   {
     slug: 'siths-website-redesign',
     title: 'SITHS Website Redesign',
+    image: '/images/siths website redesign.png',
     problem:
       'The old school website was confusing to navigate, visually outdated, and had broken links scattered across pages. Important information was buried, and the design didn\'t reflect what the school is like today.',
     audience:
