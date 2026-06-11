@@ -1,0 +1,190 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --paper: #fffbfc;
+    --ink: #1c1c1c;
+    --muted: #6b6560;
+    --line: #e8e4e6;
+    --rose: #d4869c;
+    --blush: #f9dde8;
+    --mint: #d4e8d4;
+    --sage: #9bb89b;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    color: var(--ink);
+    background-color: var(--paper);
+    background-image:
+      radial-gradient(ellipse 80% 50% at 100% -10%, rgba(249, 221, 232, 0.85), transparent),
+      radial-gradient(ellipse 60% 40% at 0% 100%, rgba(212, 232, 212, 0.55), transparent);
+    background-attachment: fixed;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: var(--blush);
+    color: var(--ink);
+  }
+}
+
+@layer components {
+  .section-padding {
+    @apply px-5 py-14 sm:px-8 md:py-20 lg:px-12;
+  }
+
+  .section-eyebrow {
+    @apply font-mono text-xs uppercase tracking-[0.2em];
+    color: var(--rose);
+  }
+
+  .section-title {
+    @apply font-display text-3xl sm:text-4xl md:text-[2.75rem] md:leading-tight;
+    color: var(--ink);
+  }
+
+  .hero-panel {
+    @apply relative overflow-hidden rounded-2xl p-8 sm:p-10;
+    border: 1px solid var(--line);
+    background-image: linear-gradient(
+      135deg,
+      rgba(249, 221, 232, 0.55) 0%,
+      rgba(255, 251, 252, 0.9) 45%,
+      rgba(212, 232, 212, 0.35) 100%
+    );
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
+  .hero-name {
+    @apply font-display text-4xl lowercase leading-[1.05] sm:text-5xl md:text-6xl;
+    color: var(--ink);
+  }
+
+  .card {
+    @apply rounded-xl p-6;
+    border: 1px solid var(--line);
+    background-color: rgba(255, 255, 255, 0.8);
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-2.5 text-sm font-medium text-white transition-all hover:shadow-md;
+    background-color: var(--sage);
+  }
+
+  .btn-primary:hover {
+    background-color: var(--ink);
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-5 py-2.5 text-sm font-medium transition-all;
+    border: 1px solid var(--line);
+    background-color: white;
+    color: var(--ink);
+  }
+
+  .btn-secondary:hover {
+    border-color: var(--rose);
+    background-color: rgba(249, 221, 232, 0.45);
+  }
+
+  .skill-badge {
+    @apply inline-block rounded-md px-3 py-1 text-sm;
+    border: 1px solid rgba(232, 228, 230, 0.8);
+    color: var(--ink);
+  }
+
+  .image-placeholder {
+    @apply flex items-center justify-center rounded-xl;
+    border: 1px dashed var(--line);
+    background-color: rgba(212, 232, 212, 0.35);
+    color: var(--muted);
+  }
+
+  .nav-link {
+    @apply text-sm transition-colors;
+    color: var(--muted);
+  }
+
+  .nav-link:hover {
+    color: var(--rose);
+  }
+
+  .nav-link-active {
+    @apply font-medium underline decoration-2 underline-offset-4;
+    color: var(--ink);
+    text-decoration-color: var(--rose);
+  }
+
+  .tag {
+    @apply rounded-md px-2 py-0.5 font-mono text-[0.65rem] uppercase tracking-wide;
+    border: 1px solid var(--line);
+    background-color: rgba(249, 221, 232, 0.4);
+    color: rgba(28, 28, 28, 0.7);
+  }
+
+  .site-link-row {
+    @apply flex items-baseline justify-between gap-4 border-l-4 py-5 pl-5 transition-all;
+  }
+
+  .site-link-row:hover {
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+
+  .site-header {
+    border-bottom: 1px solid var(--line);
+    background: linear-gradient(
+      90deg,
+      rgba(249, 221, 232, 0.55) 0%,
+      rgba(255, 251, 252, 0.95) 50%,
+      rgba(212, 232, 212, 0.45) 100%
+    );
+    backdrop-filter: blur(8px);
+  }
+
+  .site-logo {
+    color: var(--ink);
+    transition: color 0.2s ease;
+  }
+
+  .site-logo:hover {
+    color: var(--rose);
+  }
+
+  .skill-card-pink {
+    background-color: rgba(249, 221, 232, 0.55);
+  }
+
+  .skill-card-green {
+    background-color: rgba(212, 232, 212, 0.5);
+  }
+
+  .skill-badge-pink {
+    border: 1px solid rgba(212, 134, 156, 0.35);
+    background-color: rgba(255, 251, 252, 0.85);
+    color: var(--ink);
+  }
+
+  .skill-badge-green {
+    border: 1px solid rgba(155, 184, 155, 0.45);
+    background-color: rgba(255, 255, 255, 0.85);
+    color: var(--ink);
+  }
+
+  .skills-cta {
+    border: 1px solid var(--line);
+    border-radius: 0.75rem;
+    background: linear-gradient(
+      135deg,
+      rgba(212, 232, 212, 0.45) 0%,
+      rgba(249, 221, 232, 0.35) 100%
+    );
+    padding: 1.5rem;
+  }
+}
